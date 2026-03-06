@@ -1,0 +1,26 @@
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: black;
+  color: white;
+}
+
+.btn-secondary {
+  background: gray;
+  color: white;
+}
+
+.btn-destructive {
+  background: red;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
