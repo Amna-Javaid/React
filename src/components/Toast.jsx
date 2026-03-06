@@ -1,34 +1,24 @@
-import { useEffect } from "react"
+function Toast({ message, type = "success" }) {
 
-function Toast({ message, duration = 3000, onClose }) {
+  const styles = {
+    padding: "12px 16px",
+    borderRadius: "6px",
+    color: "white",
+    margin: "10px",
+    width: "250px"
+  }
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      onClose()
-    }, duration)
-
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [duration, onClose])
+  const colors = {
+    success: "green",
+    error: "red",
+    warning: "orange"
+  }
 
   return (
-    <div style={styles.toast}>
+    <div style={{ ...styles, background: colors[type] }}>
       {message}
     </div>
   )
-}
-
-const styles = {
-  toast: {
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    background: "black",
-    color: "white",
-    padding: "12px 20px",
-    borderRadius: "8px"
-  }
 }
 
 export default Toast
