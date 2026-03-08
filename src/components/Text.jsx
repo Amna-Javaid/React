@@ -1,7 +1,7 @@
-function Text({ label, size }) {
+function Text({ children}) {
   return (
-    <p style={{ fontSize: size }}>
-      {label}
+    <p style={{ fontSize: 20 }}>
+      {children}
     </p>
   )
 }
